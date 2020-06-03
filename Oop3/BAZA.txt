@@ -1,0 +1,125 @@
+USE Praksa
+CREATE TABLE Country
+(
+ID_country INT  NOT NULL,
+Country_name VARCHAR(15) NOT NULL,
+Country_call_number INTEGER NOT NULL,
+Country_population INTEGER NOT NULL,
+Country_president VARCHAR(15) NOT NULL,
+City_name VARCHAR(15) NOT NULL,
+PRIMARY KEY (ID_country)
+)
+
+CREATE TABLE City
+(
+ID_city INT NOT NULL,
+City_name VARCHAR(15),
+City_population INTEGER NOT NULL,
+City_president VARCHAR(15) NOT NULL,
+PRIMARY KEY (ID_city),
+FOREIGN KEY (ID_city) REFERENCES Country(ID_country) ON DELETE CASCADE
+)
+CREATE TABLE Person
+(
+ID_person INT NOT NULL,
+First_name VARCHAR(15) NOT NULL,
+Last_name VARCHAR(15) NOT NULL,
+Age INTEGER NOT NULL,
+PRIMARY KEY(ID_person),
+FOREIGN KEY (ID_person) REFERENCES City(ID_city) ON DELETE CASCADE
+)
+CREATE TABLE Passport
+(
+ID_passport INT NOT NULL,
+Name_passport VARCHAR(3) NOT NULL,
+PRIMARY KEY(ID_passport),
+FOREIGN KEY (ID_passport) REFERENCES Person(ID_person) ON DELETE CASCADE
+)
+
+--INSERT FOR COUNTRY
+--ID_country 
+--Country_name 
+--Country_call_number 
+--Country_population 
+--Country_president 
+
+INSERT INTO Country VALUES(1,'Croatia', 123, 4000, 'Zoran', 'Zagreb');
+INSERT INTO Country VALUES(2, 'Austria', 111, 5000, 'Australac', 'Bec');
+INSERT INTO Country VALUES(3, 'Mexico', 222, 7000, 'Meksikanac', 'CDMexico');
+INSERT INTO Country VALUES(4, 'Cuba', 333, 2000, 'Kubanac', 'Havana');
+
+SELECT * FROM Country;
+
+--INSERT FOR CITY
+--ID_city 
+--City_name 
+--City_population 
+--City_president 
+
+INSERT INTO City VALUES(1,'Zagreb', 1500, 'Bandic');
+INSERT INTO City VALUES(2,'Bec', 2600, 'Bekavac');
+INSERT INTO City VALUES(3,'CDMexico', 2700, 'Andreas');
+INSERT INTO City VALUES(4,'Havana', 1900, 'Miguel');
+
+SELECT * FROM City;
+
+--INSERT FOR PERSON
+--ID_person 
+--First_name 
+--Last_name 
+--Age 
+INSERT INTO Person VALUES(1,'Name1','Surname1', 18);
+INSERT INTO Person VALUES(2,'Name2','Surname2', 19);
+INSERT INTO Person VALUES(3,'Name3','Surname3', 18);
+INSERT INTO Person VALUES(4,'Name4','Surname4', 20);
+INSERT INTO Person VALUES(5,'Name5','Surname5', 30);
+
+SELECT * FROM Person;
+
+--INSERT FOR PASSPORT
+--ID_passport INT NOT NULL,
+--Name_passport VARCHAR(3) NOT NULL,
+INSERT INTO Passport VALUES(1,'C');
+INSERT INTO Passport VALUES(2,'AU');
+INSERT INTO Passport VALUES(3,'MEX');
+
+SELECT * FROM Passport;
+
+--DELETE FROM PASSPORT
+SELECT Name_passport FROM Passport;
+DELETE FROM Passport
+WHERE Name_passport = 'AU';
+SELECT * FROM Passport;
+
+--DELETE FROM COUNTRY
+SELECT * FROM Country;
+DELETE FROM Country
+WHERE City_name = 'Zagreb'
+SELECT * FROM Country;
+
+--UPDATE FOR COUNTRY
+UPDATE Country
+SET City_name = 'Ciude Mexico'
+WHERE City_name = 'CDMexico'
+SELECT * FROM Country
+
+--Aliases
+SELECT * FROM City;
+SELECT City_population AS Population
+FROM City
+
+--LEFT JOIN
+SELECT First_name, City.City_name
+FROM Person
+LEFT JOIN City
+ON  ID_person=ID_city
+
+--Functions
+SELECT Count(City_population)
+FROM City
+WHERE City_population > 1000
+
+SELECT Count(City_population)
+FROM City
+WHERE City_population > 2601
+
