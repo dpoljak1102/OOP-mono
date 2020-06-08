@@ -1,0 +1,17 @@
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Service.dll
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Service.pdb
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Model.dll
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Repository.dll
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Service.Common.dll
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Model.Common.dll
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Repository.Common.dll
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Model.pdb
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Repository.pdb
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Service.Common.pdb
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Model.Common.pdb
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\bin\Debug\Praksa.Repository.Common.pdb
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\obj\Debug\Praksa.Service.csprojAssemblyReference.cache
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\obj\Debug\Praksa.Service.csproj.CoreCompileInputs.cache
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\obj\Debug\Praksa.Service.csproj.CopyComplete
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\obj\Debug\Praksa.Service.dll
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Service\obj\Debug\Praksa.Service.pdb
