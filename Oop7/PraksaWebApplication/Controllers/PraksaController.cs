@@ -32,9 +32,6 @@ namespace PraksaWebApplication.Controllers
         protected IPraksaPersonService Service { get; private set;}
         #endregion
 
-        //public List<Praksa.Model.Person> people =  new List<Praksa.Model.Person>();
-        //PraksaPersonService peopleService = new PraksaPersonService();
-        //model from controller
         List<NamesRest> names = new List<NamesRest>() { };
 
         //GIVE all people
@@ -43,8 +40,6 @@ namespace PraksaWebApplication.Controllers
         public async Task<HttpResponseMessage> GetAllPeopleAsync()
         {
             var allPeople = await Service.GetAllPeopleAsync();
-            //Method from service to give list of ppl
-            //people = await peopleService.GetAllPeopleAsync();
             if (allPeople != null)
             {
                 return Request.CreateResponse(HttpStatusCode.OK, allPeople);
@@ -71,13 +66,6 @@ namespace PraksaWebApplication.Controllers
                 }
 
                 return Request.CreateResponse(HttpStatusCode.OK, names);
-
-                //Show client only names and surnames
-                //foreach (var person in people)
-                //{
-                //    names.Add(new NamesRest { FirstName = person.FirstName, LastName = person.LastName });
-                //}
-                //return Request.CreateResponse(HttpStatusCode.OK, names);
             }
             return Request.CreateResponse(HttpStatusCode.NotFound, "Not found");
         }
@@ -87,15 +75,11 @@ namespace PraksaWebApplication.Controllers
         [Route("api/Praksa/People")]
         public async Task<HttpResponseMessage> UpdatePersonAsync([FromBody] Praksa.Model.Person person)
         {
-            //check for valid data
-            //here we can check for more like if clinet put correct name,lastname..etc..
             if (person != null)
             {
-                //data is valid
                 await Service.UpdatePersonAsync(person);
                 return Request.CreateResponse(HttpStatusCode.OK,"Update done");
             }
-            //data is empty
             return Request.CreateResponse(HttpStatusCode.NotFound, "Not valid data");
         }
 
@@ -117,7 +101,6 @@ namespace PraksaWebApplication.Controllers
         [Route("api/Praksa/People")]
         public async Task<HttpResponseMessage> AddPersonAsync([FromBody] Praksa.Model.Person person)
         {
-            //check valid data
             if (person != null) 
             {
                 await Service.AddPersonAsync(person);
