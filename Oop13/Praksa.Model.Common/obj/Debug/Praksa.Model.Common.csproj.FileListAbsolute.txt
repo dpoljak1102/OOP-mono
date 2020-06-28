@@ -1,0 +1,6 @@
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Model.Common\bin\Debug\Praksa.Model.Common.dll
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Model.Common\bin\Debug\Praksa.Model.Common.pdb
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Model.Common\obj\Debug\Praksa.Model.Common.csprojAssemblyReference.cache
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Model.Common\obj\Debug\Praksa.Model.Common.csproj.CoreCompileInputs.cache
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Model.Common\obj\Debug\Praksa.Model.Common.dll
+C:\Users\Deni\source\repos\PraksaWP\Praksa.Model.Common\obj\Debug\Praksa.Model.Common.pdb
